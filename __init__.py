@@ -10,7 +10,7 @@ def create_app():
 
     # 设置配置
     app.config['SECRET_KEY'] = 'your-secret-key'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:835b91d2f8618cf3@localhost/llm-assistant'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@host/dbname'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # 初始化数据库
