@@ -20,31 +20,6 @@ def get_from_llm(course, readonly, pid=0):
         result_format='message'
     )
     answer = response.output.choices[0].message.content
-    # answer = {
-    #     "code": "",
-    #     "message": "",
-    #     "output": {
-    #         "choices": [
-    #             {
-    #                 "finish_reason": "stop",
-    #                 "message": {
-    #                     "content": "### Python 学习路径\n\n#### 初级阶段\n\n1. **Python 基础**\n   - 安装 Python（推荐使用 Anaconda 或者通过官方 Python 安装指南）\n   - 学习基本语法：变量、数据类型（整数、浮点数、字符串）、运算符、控制流（if, for, while）\n   - 函数与模块导入，如 `math` 和 `random`\n   - 文件操作：读写文件、处理文本文件\n\n2. **数据结构与算法**\n   - 列表、元组、字典、集合的操作与应用\n   - 字典推导式、列表推导式\n   - 常见排序算法（冒泡排序、选择排序、插入排序、快速排序）\n   - 简单的递归算法\n\n3. **面向对象编程**\n   - 类与对象的概念\n   - 封装、继承、多态\n   - 面向对象设计原则（SOLID）\n\n#### 中级阶段\n\n4. **函数式编程与装饰器**\n   - 使用高阶函数（如 map, filter, reduce）\n   - 装饰器的使用与实现\n   - Lambda 表达式\n\n5. **异常处理与调试**\n   - 异常捕获与自定义异常类\n   - 使用日志库（如 logging）进行错误记录与调试\n\n6. **文件与网络编程**\n   - 处理二进制文件与使用文件句柄\n   - HTTP 请求与响应处理（使用 requests 库）\n   - 基本的 socket 编程\n\n7. **Web 开发基础**\n   - 使用 Flask 或 Django 构建 Web 应用\n   - 模板系统（如 Jinja2）\n   - 数据库集成（使用 SQLAlchemy 或 Django ORM）\n\n#### 进阶阶段\n\n8. **数据处理与分析**\n   - 使用 pandas 进行数据清洗、转换、聚合与可视化\n   - 数据可视化工具（如 Matplotlib, Seaborn, Plotly）\n\n9. **机器学习与深度学习**\n   - 使用 scikit-learn 进行基本的机器学习模型构建\n   - TensorFlow 或 PyTorch 的基础使用\n   - 数据集处理与模型训练流程\n\n10. **性能优化与并发**\n    - 内存管理与垃圾回收\n    - 使用多线程或异步 I/O（asyncio）提高程序性能\n    - 使用 Redis 或其他缓存技术优化数据访问速度\n\n#### 实战项目\n\n- **个人项目**：选择一个兴趣领域（如数据科学、Web 开发、游戏开发等），使用 Python 完成一个完整的项目，例如：数据分析报告、小型网站、简单的游戏等。\n\n#### 持续学习与扩展\n\n- **参加在线课程**：Coursera、Udemy、edX 等平台提供的 Python 相关课程。\n- **阅读文档与社区资源**：深入学习 Python 标准库、第三方库的文档，并参与 Stack Overflow、GitHub 等社区交流。\n- **参与开源项目**：在 GitHub 上寻找感兴趣的开源项目贡献代码或问题解答，提升实战能力。\n\n通过以上步骤，你可以从零基础开始，逐步成长为熟练掌握 Python 的开发者。记得在学习过程中实践动手，将理论知识应用于实际项目中，这样才能更好地理解和掌握 Python 编程。",
-    #                     "role": "assistant"
-    #                 }
-    #             }
-    #         ],
-    #         "finish_reason": "null",
-    #         "text": "null"
-    #     },
-    #     "request_id": "0072a949-31f7-92b6-a814-e04b7a89fe84",
-    #     "status_code": 200,
-    #     "usage": {
-    #         "input_tokens": 47,
-    #         "output_tokens": 726,
-    #         "total_tokens": 773
-    #     }
-    # }
-    # content = answer['output']['choices'][0]['message']['content']
     content = answer
     if readonly == '1':
         return content

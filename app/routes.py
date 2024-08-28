@@ -40,7 +40,7 @@ def create():
     user = data.get('user', '')
     pid = data.get('pid', 0)
 
-    subres = subject.create_post(subjects, user, pid)
-    learnres = learning.create_post(my_learn, user, pid)
+    subject.create_post(subjects, user, pid)
+    learning.create_post(my_learn, user, pid)
 
     return 'success'
