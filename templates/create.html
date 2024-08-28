@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming Learning Platform</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section-content {
+            display: none;
+            margin-left: 20px;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- 引入 jQuery -->
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/index.js"></script>
+</head>
+<body>
+    <h1>Programming Learning Platform</h1>
+    <label for="languageInput">Choose or enter a programming language:</label>
+        <input type="text" id="question" placeholder="e.g., Python">
+        <button id="submitLanguage">Get Outline</button>
+    <hr>
+    <div id="contentArea"></div>
+
+    <button id="submitCheckBox">Get Outline</button>
+    <div id="list-container">
+        <!-- 列表将在这里生成 -->
+    </div>
+</body>
+<script>
+
+</script>
+</html>

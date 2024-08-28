@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>语言学习路径</title>
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .content-box {
+        padding: 10px
+      }
+      .content-box a{
+        font-size: 12px;
+        text-decoration: none;
+      }
+      .content-box ul{
+        padding-left: 1rem
+      }
+      .content-box ul li{
+        padding-left: 1rem
+      }
+    </style>
+  </head>
+  <body>
+
+
+<header class="p-3 mb-3 border-bottom fixed-top" style="background-color: white">
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        <div class="input-group">
+          <input type="hidden" id="pid" value="0">
+          <input type="text" id="user" class="form-control" placeholder="输入用户名">
+          <input type="text" id="language" class="form-control" value="java" placeholder="输入学习语言">
+          <button type="submit" id="submitLanguage" class="btn btn-primary">学习</button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" style="margin-left: 150px">
+        <button type="submit" id="submitCheckBox" class="btn btn-success">提交选中</button>
+      </div>
+      <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" style="margin-left: 150px">
+        <input type="radio" class="form-check-input" id="readonly" value="1">
+        <label class="form-check-label" for="readonly">阅读模式</label>
+      </div>
+    </div>
+</header>
+<main>
+  <div class="container-fluid pb-3" style="margin-top: 85px">
+    <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+      <div id="left" class="bg-light border rounded-3 content-box">
+
+      </div>
+      <div id="right" class="bg-light border rounded-3">
+        <div id="list-container" class="content-box">
+            <!-- 列表将在这里生成 -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<div class="container">
+  <footer class="py-3 my-4">
+    <p class="text-center text-muted">&copy; 2024 Company, Inc</p>
+  </footer>
+</div>
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+<script src="/static/js/index.js"></script>
+</body>
+</html>
